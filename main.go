@@ -7,6 +7,7 @@ import (
 	"os"
 	"strconv"
 	"time"
+	"path/filepath"
 
 	"github.com/theMariusK/algorithms/sorting"
 )
@@ -38,7 +39,8 @@ func getNumbers(path string) []int {
 }
 
 func main() {
-	arr := getNumbers("C:/Users/marix/Documents/Projects/algorithms/samples/numbers.txt")
+	path, _ := filepath.Abs("samples/numbers.txt")
+	arr := getNumbers(path)
 
 	fmt.Printf("Original: %d\n", arr)
 	start := time.Now()
