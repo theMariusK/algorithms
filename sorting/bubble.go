@@ -1,6 +1,6 @@
 package sorting
 
-func incrementSort(arr []int) []int {
+func incrementBubble(arr []int) []int {
 	sorted := arr
 
 	for i, _ := range sorted {
@@ -21,7 +21,7 @@ func incrementSort(arr []int) []int {
 	return sorted
 }
 
-func decrementSort(arr []int) []int {
+func decrementBubble(arr []int) []int {
 	sorted := arr
 
 	for i, _ := range sorted {
@@ -42,10 +42,10 @@ func decrementSort(arr []int) []int {
 	return sorted
 }
 
-func InsertionSort(arr []int, act int) []int {
+func BubbleSort(arr []int, act int) []int {
 	if act == 1 {
-		return incrementSort(arr)
+		return incrementBubble(arr)
 	} else {
-		return decrementSort(arr)
+		return decrementBubble(arr)
 	}
 }
