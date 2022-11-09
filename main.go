@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 	"strconv"
 	"time"
-	"path/filepath"
 
 	"github.com/theMariusK/algorithms/sorting"
 )
@@ -44,7 +44,7 @@ func main() {
 
 	fmt.Printf("Original: %d\n", arr)
 	start := time.Now()
-	sorted := sorting.InsertionSort(arr, INCR)
+	sorted := sorting.MergeSort(arr, INCR)
 	elapsed := time.Since(start)
 	fmt.Printf("Sorted: %d\n", sorted)
 
